@@ -1,0 +1,41 @@
+<header>
+    <div id="logo">
+      <img src="logo.png" alt="Website logo, a server" />
+    </div>
+  
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/">Management</a>
+        </li>
+        <li>
+          <!-- <button>
+            <span>
+              Logout
+            </span>
+            <span class="icon">
+              →
+            </span>
+          </button> -->
+
+          <!-- <app-button /> -->
+
+          <!-- <button appButton>
+            Logout 
+            <span class="icon">→</span>
+          </button> -->
+
+          <button appButton>
+            Logout 
+            <!-- content projection allows you to define a selector
+            that can then be matched from inside the component
+            where you're trying to project this content into. -->
+            <span ngProjectAs="icon">→</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>

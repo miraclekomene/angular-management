@@ -1,0 +1,27 @@
+<!-- <div class="dashboard-item"> -->
+    <article>
+        <header>
+          <!-- <img src="status.png" alt="A signal symbol" /> -->
+          <!-- input decorator(@Input):  -->
+          <!-- <img [src]="image.src" alt="A signal symbol" /> -->
+          
+           <!-- input function(input()): EXECUTE "image" like a function to read the signal's value -->
+          <img [src]="image().src" [alt]="image().alt" />
+          <!-- <h2>Server Status</h2> -->
+          <h2>{{ title() }}</h2>
+        </header>
+        <ng-content />
+        <!-- <div>
+          @if (currentStatus === 'online') {
+            <p>Servers are online</p>
+            <p>All systems are operational.</p>
+          } @else if (currentStatus === 'offline') {
+            <p>Servers are offline</p>
+            <p>Functionality should be restored soon.</p>
+          } @else {
+            <p>Server status is unknown</p>
+            <p>Fetching server status failed.</p>
+          }
+        </div> -->
+    </article>
+<!-- </div> -->

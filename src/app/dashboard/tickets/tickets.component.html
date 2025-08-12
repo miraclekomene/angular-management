@@ -1,0 +1,34 @@
+<!-- <article>
+    <header>
+      <img src="list.png" alt="A list of items" />
+      <h2>Support Tickets</h2>
+    </header> -->
+    <div>
+      <ul>
+        <!-- <li *ngFor> item</li> for older versions -->
+        @for (ticket of tickets; track ticket.id) {
+          <li>
+            <!-- you'll see that it's true for the first item that was added.
+            But then for subsequent items it's false.
+            So that can be a useful piece
+            of information if you have some code
+            that should behave differently
+            or apply different styles -->
+            <!-- <app-ticket /> - {{ $first}}  -->
+            <!-- there are $last, $odd, $even, $count. for version 17 or later -->
+            <app-ticket [data]="ticket" (close)="onCloseTicket(ticket.id)" /> 
+          </li>
+          <!-- You can add @empty here after the closing curly brace.
+          And then add another pair of curly braces
+          to define the fallback content that should be output if that array is empty. -->
+        }@empty {
+          <p>No tickets available.</p>
+        }
+      </ul>
+    </div>
+    <!-- <div id="status"> -->
+    <div id="new-ticket">
+      <!-- <p>Todo...</p> -->
+       <app-new-ticket (add)="onAdd($event)"/>
+    </div>
+<!-- </article> -->

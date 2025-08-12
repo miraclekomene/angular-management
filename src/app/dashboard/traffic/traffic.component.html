@@ -1,0 +1,24 @@
+<!-- <article>
+    <header>
+      <img src="globe.png" alt="A globe" />
+      <h2>Traffic</h2>
+    </header> -->
+    <!-- <div id="traffic"> -->
+      <p>Last 7 days</p>
+
+      <div id="chart">
+        @for (dataPoint of dummyTrafficData; track dataPoint.id) {
+          <!-- styling the height of the div 
+          the value of one of these data points
+          and divide that by the highest possible value,
+          multiply it with 100 to get a percentage
+          between 0 and 100,
+          and concatenate that to a string
+          with the percentage sign at the end
+          so that the height style property of this div is set
+          to some percentage between 0 and 100.-->
+          <div [style.height]="(dataPoint.value / maxTraffic) * 100 + '%'"></div>
+        }
+      </div>
+    <!-- </div> -->
+<!-- </article> -->

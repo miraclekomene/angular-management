@@ -1,0 +1,47 @@
+<!-- <article>
+    <header>
+      <img src="status.png" alt="A signal symbol" />
+      <h2>Server Status</h2>
+    </header> -->
+    <!-- <div id="status"> -->
+      <!--<div [class.status]="currentStatus === 'offline'">--><!-- conditional statement for class to check if currentstatus is === 'offline' and if false the "status" class will not be added to this div -->
+      <!-- OR (for multiple classes)-->
+      <!-- <div [class]="{
+        status: true,
+        'status-online': currentStatus === 'online',
+        'status-offline': currentStatus === 'offline',
+        'status-unknown' : currentStatus === 'unknown'
+      }"
+      > -->
+      <!-- OR using signal -->
+      <div [class]="{
+        status: true,
+        'status-online': currentStatus() === 'online',
+        'status-offline': currentStatus() === 'offline',
+        'status-unknown' : currentStatus() === 'unknown'
+      }"
+      >
+      <!-- [style]="{
+        fontSize: '64px'
+      }"
+      > -->
+      <!-- In JavaScript and TypeScript, you can't add properties
+      that include dashes or white space like this to an object. 
+      In such situations, you have to convert these properties
+      to strings by wrapping them with quotes.
+      This is allowed by both JavaScript and TypeScript,-->
+      <!-- @if (currentStatus === 'online') { -->
+      @if (currentStatus() === 'online') {
+        <p>Servers are online</p>
+        <p>All systems are operational.</p>
+      <!-- } @else if (currentStatus === 'offline') { -->
+      } @else if (currentStatus() === 'offline') {
+        <p>Servers are offline</p>
+        <p>Functionality should be restored soon.</p>
+      } @else {
+        <p>Server status is unknown</p>
+        <p>Fetching server status failed.</p>
+      }
+    </div>
+    <!-- </div> -->
+<!-- </article> -->

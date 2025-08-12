@@ -1,0 +1,32 @@
+<!-- <button> -->
+    <!-- <span>
+      Logout
+    </span>
+    <span class="icon">
+      →
+    </span> -->
+
+    <!-- OR -->
+    <span>
+      <ng-content />
+    </span>
+    <!-- <span class="icon">
+      <ng-content />
+    </span> -->
+    <!-- OR : but this brings duplicate -->
+    <span class="icon">
+      <!-- <ng-content select=".icon" /> -->
+       <!-- using ngProjectAs -->
+      <!-- <ng-content select="icon" /> -->
+
+      <!-- fallback -->
+      <!-- <ng-content select="icon">
+      →
+      </ng-content> -->
+      <ng-content select="icon" />
+    </span>
+
+    <!-- OR -->
+    <!-- using css class selector -->
+    <!-- <ng-content select=".icon" /> -->
+<!-- </button> --> 

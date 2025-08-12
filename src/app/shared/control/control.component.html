@@ -1,0 +1,13 @@
+<!-- <p class="control"> -->
+    <!-- since I'm using the "input" function on "control.component.ts" file, it's a signal
+    and I need to add those parentheses. -->
+
+    <!-- If I would use the @Input decorator,
+    you would not add them, but with signals, you need them. -->
+    <label>{{ label() }}</label>
+    <!-- <input name="title" id="title"> -->
+
+    <!-- to be well, selective about which kind of content
+    can be projected into one of your components e.g input, textarea -->
+    <ng-content select="input, textarea"/>
+<!-- </p> -->

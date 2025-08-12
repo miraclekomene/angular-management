@@ -1,0 +1,45 @@
+<!-- <form (ngSubmit)="onSubmit(titleInput, requestInput)"> -->
+    <!-- OR -->
+<!-- <form (ngSubmit)="onSubmit(titleInput.value, titleInput.value)" #form> -->
+    <!-- OR -->
+<form (ngSubmit)="onSubmit()" #form>
+    <!-- since I wanna set it to a string value here,
+    I'll not use square brackets
+    because I don't need the result
+    of some dynamic TypeScript expression here.
+    Instead, I'll just set this to a label of title -->
+
+    <!-- an alternative way of extracting the values
+    that have been entered into those inputs
+    when they are submitted is to store that element
+    or a reference to that element
+    in a so-called template variable,
+    which is a feature offered by Angular,
+    not a standard browser feature. 
+    by adding a special attribute to that element,
+    an attribute that starts with a hashtag.
+    That's important(the hashtag at the begining).-->
+    <app-control class="control" label="Title">
+        <!-- <input name="title" id="title" #titleInput #input [(ngModel)]="entererdTitle" /> -->
+        <input name="title" id="title" #input [(ngModel)]="entererdTitle" />
+    </app-control>
+
+    <app-control class="control" label="Request">
+        <!-- <textarea name="text" id="request" rows="3" #requestInput #input [(ngModel)]="entererdText"></textarea> -->
+        <textarea name="text" id="request" rows="3" #input [(ngModel)]="entererdText"></textarea>
+    </app-control>
+
+    <p>
+        <button appButton>
+            <!-- <span>
+                Submit
+            </span>
+            <span class="icon">
+                ⌲
+            </span> -->
+            Submit
+            <!-- <span class="icon">⌲</span> -->
+            <span ngProjectAS="icon">⌲</span>
+        </button>
+    </p>
+</form>
